@@ -1,6 +1,7 @@
 import './App.css'; //JS requires all import statements to be at the top before other logic. You can only define function App() once and export default App once per file.//
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'; //BrowserRouter: Wraps the whole app and listens to the browser's URL bar.//Routes: the container that holds all your specific routes.
 //Route;Maps a specific URL path like /todos) to a specific component (like <h1>Todos Page Coming Soon</h1>).// //Link: replaces the standard HTML <a href="..."> tag. It allows you to navigate w/o the browser performing a full page reload."
+import AddTodoForm from './components/AddTodoForm';
 function App() {
   return (
     <BrowserRouter>
@@ -24,7 +25,7 @@ function App() {
         } />
 
         {/* Temporary placeholders for the required views */}
-        <Route path="/todos" element={<h1>Todos Page Coming Soon</h1>} />
+        <Route path="/todos" element={<AddTodoForm />} />
         <Route path="/contact" element={<h1>Contact Page Coming Soon</h1>} />
       </Routes>
     </BrowserRouter>
@@ -32,3 +33,5 @@ function App() {
 }
 
 export default App;
+
+//Ctrl + C stops the server. Restart it with npm start.//
