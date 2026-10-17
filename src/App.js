@@ -1,6 +1,6 @@
 import './App.css'; //JS requires all import statements to be at the top before other logic. You can only define function App() once and export default App once per file.//
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'; //BrowserRouter: Wraps the whole app and listens to the browser's URL bar.//Routes: the container that holds all your specific routes.
+//Route;Maps a specific URL path like /todos) to a specific component (like <h1>Todos Page Coming Soon</h1>).// //Link: replaces the standard HTML <a href="..."> tag. It allows you to navigate w/o the browser performing a full page reload."
 function App() {
   return (
     <BrowserRouter>
